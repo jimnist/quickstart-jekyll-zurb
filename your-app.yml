@@ -1,0 +1,10 @@
+# needs to be symlinked to ~/.tmuxinator/<your-appname>.yml
+# ln -s ~/wrk/<dirname>/<your-appname>.yml ~/.tmuxinator/<your-appname>.yml
+# http://stackoverflow.com/questions/9812000/specify-pane-percentage-in-tmuxinator-project
+project_name: <your-appname>
+project_root: ~/wrk/<dirname>/<your-appname>
+# socket_name: foo # Not needed. Remove to use default socket
+tabs:
+  - console: subl .
+  - jekyll:  jekyll --auto --server
+  - compass: compass watch -c compass_config.rb
